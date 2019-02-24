@@ -98,7 +98,7 @@ body {
 }
 
 #artGallery {
-  width: 850px;
+  width: 800px;
 }
 
 hr {
@@ -111,4 +111,9 @@ h3 {
 
 img {
   padding: 5px;
+}
+
+#imgContainer {
+  width: 620px;
+  margin: 0 auto;
 }

@@ -11,6 +11,7 @@ const rectHeightSlider = document.getElementById("rectHeight");
 const galleryBtn = document.getElementById("addToGalleryBtn");
 const artGallery = document.getElementById("artGallery");
 const clearCanvas = document.getElementById("clearCanvas");
+const imgContainer = document.getElementById("imgContainer");
 
 let redValue = 255;
 let greenValue = 0;
@@ -72,7 +73,7 @@ function uploadImg() {
   const userPrompt = prompt("paste a data url here");
   const img = new Image();
   img.addEventListener("load", function() {
-    ctx.drawImage(img, 200, 200, ctx.canvas.width / 2, ctx.canvas.height / 2);
+    ctx.drawImage(img, 150, 150, ctx.canvas.width / 2, ctx.canvas.height / 2);
   });
   img.src = userPrompt;
 }
@@ -94,9 +95,9 @@ galleryBtn.addEventListener("click", function() {
   img1.src = canvas.toDataURL();
   let resizedImg = "";
   img1.onload = function() {
-    resizedImg = resizeImage(img1, 400, 400);
+    resizedImg = resizeImage(img1, 300, 300);
     resizedImg.onload = function() {
-      artGallery.appendChild(resizedImg);
+      imgContainer.appendChild(resizedImg);
     };
   };
 });
